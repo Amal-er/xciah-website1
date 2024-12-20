@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.left {
+  background-color: rgba(255, 241, 255, 0.6);
+}
+
+.second {
+  background-color: rgba(255, 250, 233, 0.6);
+}
+.third {
+  background-color: rgba(255, 250, 233, 0.6);
+}
+.right {
+  background-color: rgba(234, 255, 243, 0.6);
+}
+
+.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+.opacity-0 {
+  transform: translateY(50px);
+  opacity: 0;
+}
+.transition-opacity {
+  transition: opacity 0.7s, transform 0.7s;
+}
+
+/* ---------------------- */
+.feature-box {
+  position: relative;
+  top: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.feature-box.fixed {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%; /* Adjust based on your layout */
+}
+
+.screen {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, z-index 0.5s ease-in-out;
+}
+
+.screen.visible {
+  opacity: 1;
+  z-index: 1;
+}
+
+.screen.hidden {
+  z-index: -1;
+}
